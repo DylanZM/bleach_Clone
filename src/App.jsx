@@ -1,5 +1,5 @@
 import Hero from "./components/hero";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/sidebar";
 
 function App() {
   return (
