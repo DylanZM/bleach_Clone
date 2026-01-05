@@ -1,11 +1,16 @@
 import Hero from "./components/hero";
 import Sidebar from "./components/sidebar";
+import PreFooter from "./components/preFooter/preFooter";
 
 function App() {
   return (
-    <div className="min-h-screen w-full relative bg-bg-main text-white z-10">
+    <div className="min-h-screen w-full flex bg-bg-main text-white">
       <Sidebar />
-      <Hero />
+
+      <main className="flex-1">
+        <Hero />
+        <PreFooter />
+      </main>
     </div>
   );
 }

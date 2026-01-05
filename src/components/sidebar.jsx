@@ -4,7 +4,7 @@ import { SiLine } from "react-icons/si";
 
 const Sidebar = () => {
   return (
-    <aside className="fixed left-0 top-0 h-screen w-20 bg-black border-r border-white flex flex-col items-center justify-between py-8 z-50">
+    <aside className="sticky top-0 h-screen w-20 bg-black border-r border-white flex flex-col items-center justify-between py-8">
       <HamburgerIcon />
       
       <div className="flex flex-col gap-6">
