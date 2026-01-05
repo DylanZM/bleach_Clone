@@ -20,8 +20,9 @@ export default function Miniatures({ currentIndex, onSelectImage }) {
           <img
             src={image}
             alt={`thumbnail-${index}`}
-            className="w-full h-full object-cover opacity-70 "
+            className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-black/30 hover:bg-black/10 transition-colors" />
 
           <AnimatePresence mode="wait">
             <motion.span
@@ -29,7 +30,7 @@ export default function Miniatures({ currentIndex, onSelectImage }) {
               animate={{ y: 0 }}
               exit={{ y: -20 }}
               transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
-              className={`absolute text-[15px] font-abril font-bold tracking-wider right-8 top-14 -translate-y-14 whitespace-nowrap transition-colors hover:text-white
+              className={`absolute text-[15px] font-abril font-bold tracking-wider right-8 top-14 -translate-y-14 whitespace-nowrap transition-colors hover:text-white z-10
                 ${
                   currentIndex === index
                     ? "text-white"

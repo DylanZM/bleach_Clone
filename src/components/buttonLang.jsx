@@ -7,7 +7,7 @@ export default function ButtonLang() {
     <div className="absolute -translate-y-2 top-4 right-4 z-10 flex gap-1">
       <button 
         onClick={() => setActiveBtn('JP')}
-        className={`font-abril w-10 transition-colors border-2 border-white font-bold ${
+        className={`font-abril w-8 transition-colors border-2 border-white font-bold ${
           activeBtn === 'JP' 
             ? 'bg-white text-black' 
             : 'bg-bg-main text-white hover:bg-white hover:text-black'
@@ -17,7 +17,7 @@ export default function ButtonLang() {
       </button>
       <button 
         onClick={() => setActiveBtn('EN')}
-        className={`font-abril w-10 transition-colors border-2 border-white font-bold ${
+        className={`font-abril w-8 transition-colors border-2 border-white font-bold ${
           activeBtn === 'EN' 
             ? 'bg-white text-black' 
             : 'bg-bg-main text-white hover:bg-white hover:text-black'

@@ -9,7 +9,7 @@ export default function PreFooter() {
 
   return (
     <>
-      <section className="relative w-full h-screen bg-black flex items-center justify-center overflow-hidden mt-33">
+      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden mt-33">
         <BackgroundVideo
           isHovered={isHovered}
           setIsHovered={setIsHovered}

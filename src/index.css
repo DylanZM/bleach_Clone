@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Serif:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -7,7 +6,7 @@
   --color-title: #F6832E;
   --color-hover: #CF6F32;
   --color-background-main: #000000;
-  --font-serif: "Abril Fatface", "Noto Serif JP", "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ 明朝", "ＭＳ Ｐ明朝", "Noto Serif JP", serif;
+  --font-serif: "Noto Serif", "Abril Fatface", "Noto Serif JP", "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ 明朝", "ＭＳ Ｐ明朝", serif;
 }
 
 html, body {
@@ -20,5 +19,13 @@ html, body {
   --color-hover: #CF6F32;
   --color-bg-main: #000000;
   --font-abril: "Abril Fatface", "Noto Serif JP", serif;
+  --font-noto: "Noto Serif", serif;
+}
 
+/* En index.css */
+.hero-pattern {
+  background-image: 
+    linear-gradient(rgba(246, 131, 46, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(246, 131, 46, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
 }

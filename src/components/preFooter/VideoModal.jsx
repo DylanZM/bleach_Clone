@@ -28,7 +28,7 @@ export default function VideoModal({ isOpen, onClose }) {
 
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/FHH86-gHuJk?autoplay=1"
+              src="https://www.youtube.com/embed/W99Ef2LkyOg?autoplay=1"
               frameBorder="0"
               allow="autoplay; encrypted-media"
               allowFullScreen

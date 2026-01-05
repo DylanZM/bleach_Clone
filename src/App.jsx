@@ -1,6 +1,7 @@
 import Hero from "./components/hero";
 import Sidebar from "./components/sidebar";
 import PreFooter from "./components/preFooter/preFooter";
+import Info from "./components/introduction/info";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <main className="flex-1">
         <Hero />
         <PreFooter />
+        <Info />
       </main>
     </div>
   );
