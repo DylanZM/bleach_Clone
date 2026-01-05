@@ -4,7 +4,7 @@ export default function ButtonLang() {
   const [activeBtn, setActiveBtn] = useState('JP');
 
   return (
-    <div className="absolute top-4 right-4 z-10 flex gap-1">
+    <div className="absolute -translate-y-2 top-4 right-4 z-10 flex gap-1">
       <button 
         onClick={() => setActiveBtn('JP')}
         className={`font-abril w-10 transition-colors border-2 border-white font-bold ${

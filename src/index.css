@@ -9,6 +9,10 @@
   --font-serif: "Abril Fatface", "Noto Serif JP", "游明朝", "YuMincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ 明朝", "ＭＳ Ｐ明朝", "Noto Serif JP", serif;
 }
 
+html, body {
+  background-color: black;
+}
+
 @theme {
   --color-text: #FFFFFF;
   --color-title: #F6832E;

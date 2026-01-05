@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Galería Interactiva</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0f0f0f;
+      font-family: Arial, sans-serif;
+    }
+
+    .gallery {
+      display: flex;
+      align-items: stretch;
+    }
+
+    /* Imagen principal */
+    .main-image {
+      width: 170px;
+      height: 460px;
+      overflow: hidden;
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Miniaturas */
+    .side-images {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .thumb {
+      position: relative;
+      width: 32px;
+      height: 100px;
+      cursor: pointer;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Texto */
+    .label {
+      position: absolute;
+      left: 2px;
+      top: 6px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: bold;
+      pointer-events: auto;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+    }
+
+    /* Hover SOLO en el texto */
+    .label:hover {
+      opacity: 1;
+    }
+
+    .white {
+      color: #ffffff;
+    }
+
+    .black {
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gallery">
+    <!-- Imagen principal -->
+    <div class="main-image">
+      <img id="mainImg" src="https://picsum.photos/400/700?random=1">
+    </div>
+
+    <!-- Miniaturas -->
+    <div class="side-images">
+
+      <div class="thumb" onclick="changeImage(this)">
+        <span class="label white">VISUAL 8</span>
+        <img src="https://picsum.photos/400/700?random=2">
+      </div>
+
+      <div class="thumb" onclick="changeImage(this)">
+        <span class="label black">TEASER 3</span>
+        <img src="https://picsum.photos/400/700?random=3">
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function changeImage(thumb) {
+      const mainImg = document.getElementById('mainImg');
+      const img = thumb.querySelector('img');
+      const temp = mainImg.src;
+      mainImg.src = img.src;
+      img.src = temp;
+    }
+  </script>
+
+</body>
+</html>
