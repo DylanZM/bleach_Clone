@@ -2,6 +2,7 @@ import Hero from "./components/hero";
 import Sidebar from "./components/sidebar";
 import PreFooter from "./components/preFooter/preFooter";
 import Info from "./components/introduction/info";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <PreFooter />
         <Info />
+        <Footer />
       </main>
     </div>
   );

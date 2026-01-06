@@ -48,7 +48,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8, y: -20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{
-            duration: 0.8,
+            duration: 0.92,
             ease: [0.43, 0.13, 0.23, 0.96],
           }}
         />
@@ -66,7 +66,7 @@ export default function Hero() {
         />
 
         <motion.span
-          className="font-abril font-bold text-[22px] mt-5"
+          className="font-abril font-normal text-[22px] mt-5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -81,49 +81,31 @@ export default function Hero() {
         <div className="flex gap-6 -translate-y-3">
           <motion.a
             href="#"
-            className="text-3xl hover:text-gray-400 transition-colors"
+            className="text-3xl hover:text-gray-400 transition-colors duration-300"
             aria-label="Twitter"
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            whileHover={{
-              scale: 1.2,
-              rotate: [0, -10, 10, -10, 0],
-              transition: { duration: 0.5 },
-            }}
-            whileTap={{ scale: 0.9 }}
           >
             <FaXTwitter size={28} />
           </motion.a>
           <motion.a
             href="#"
-            className="text-3xl hover:text-gray-400 transition-colors"
+            className="text-3xl hover:text-gray-400 transition-colors duration-300"
             aria-label="Instagram"
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.65 }}
-            whileHover={{
-              scale: 1.2,
-              rotate: [0, -10, 10, -10, 0],
-              transition: { duration: 0.5 },
-            }}
-            whileTap={{ scale: 0.9 }}
           >
             <FaInstagram size={28} />
           </motion.a>
           <motion.a
             href="#"
-            className="text-3xl hover:text-gray-400 transition-colors"
+            className="text-3xl hover:text-gray-400 transition-colors duration-300"
             aria-label="TikTok"
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            whileHover={{
-              scale: 1.2,
-              rotate: [0, -10, 10, -10, 0],
-              transition: { duration: 0.5 },
-            }}
-            whileTap={{ scale: 0.9 }}
           >
             <FaTiktok size={28} />
           </motion.a>

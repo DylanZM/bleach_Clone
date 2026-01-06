@@ -33,7 +33,7 @@ export default function BackgroundVideo({ isHovered, setIsHovered, onClick }) {
   const [videoError, setVideoError] = useState(false);
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, amount: 0.35 });
+  const isInView = useInView(ref, { once: false, amount: 0.1 });
 
   return (
     <motion.div
@@ -91,7 +91,7 @@ export default function BackgroundVideo({ isHovered, setIsHovered, onClick }) {
                 clipPath: "polygon(0 0, 0 0, 0 50%, 0 100%, 0 100%)",
               }
         }
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
         style={{ opacity: 0.65 }}
       />
     </motion.div>
