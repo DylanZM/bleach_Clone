@@ -1,5 +1,5 @@
 import Hero from "./components/hero";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/siderBar/sidebar";
 import PreFooter from "./components/preFooter/preFooter";
 import Info from "./components/introduction/info";
 import Footer from "./components/footer/footer";
