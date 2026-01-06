@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { IoClose } from "react-icons/io5";
+import ButtonClose from "./button_close";
 
 export default function VideoModal({ isOpen, onClose }) {
   return (
@@ -12,6 +12,11 @@ export default function VideoModal({ isOpen, onClose }) {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
           onClick={onClose}
         >
+          {/* Botón fuera del contenedor del video */}
+          <div className="fixed top-4 right-4 z-[60]">
+            <ButtonClose onClick={onClose} />
+          </div>
+
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -19,13 +24,6 @@ export default function VideoModal({ isOpen, onClose }) {
             className="relative w-full max-w-5xl aspect-video"
             onClick={(e) => e.stopPropagation()}
           >
-            <button
-              onClick={onClose}
-              className="absolute -top-12 right-0 text-white hover:text-gray-300"
-            >
-              <IoClose size={40} />
-            </button>
-
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/W99Ef2LkyOg?autoplay=1"
