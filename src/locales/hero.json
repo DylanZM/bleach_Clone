@@ -1,10 +1,10 @@
 {
   "HERO": {
-    "IMAGE_SRC": "/public/img/main.jpg",
-    "IMAGE_VERTICAL_SRC": "/public/img/main1.jpg",
-    "IMAGE_VERTICAL1_SRC": "/public/img/main.jpg",
-    "LOGO_SRC": "/public/img/logo.png",
-    "DESCRIPTION": "/public/img/text.png",
+    "IMAGE_SRC": "/img/main.jpg",
+    "IMAGE_VERTICAL_SRC": "/img/main1.jpg",
+    "IMAGE_VERTICAL1_SRC": "/img/main.jpg",
+    "LOGO_SRC": "/img/logo.png",
+    "DESCRIPTION": "/img/text.png",
     "SOCIAL_MEDIA": "Official Account"
   }
 }
