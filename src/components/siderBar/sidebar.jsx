@@ -10,7 +10,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <aside className="sticky top-0 h-screen w-20 bg-black border-r border-white flex flex-col items-center justify-between py-8 z-40">
+      <aside className="hidden md:sticky md:flex top-0 h-screen w-20 bg-black border-r border-white flex-col items-center justify-between py-8 z-40">
         <HamburgerIcon 
           isOpen={isMenuOpen} 
           onClick={() => setIsMenuOpen(!isMenuOpen)} 
@@ -42,6 +42,17 @@ const Sidebar = () => {
           </a>
         </div>
       </aside>
+
+      {/* Hamburger Icon para mobile */}
+      <button 
+        className="md:hidden fixed top-4 left-4 z-50"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        <HamburgerIcon 
+          isOpen={isMenuOpen} 
+          onClick={() => setIsMenuOpen(!isMenuOpen)} 
+        />
+      </button>
 
       <OpenSider isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </>

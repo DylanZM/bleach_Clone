@@ -6,7 +6,7 @@ import Footer from "./components/footer/footer";
 
 function App() {
   return (
-    <div className="min-h-screen w-full flex bg-bg-main text-white">
+    <div className="min-h-screen w-full flex bg-bg-main text-white ">
       <Sidebar />
 
       <main className="flex-1 overflow-x-hidden">

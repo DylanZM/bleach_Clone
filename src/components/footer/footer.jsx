@@ -6,9 +6,9 @@ export default function Footer() {
     <footer className="w-full">
       <PageTop />
       
-      <div className="w-full py-8">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex justify-center gap-2 mb-4">
+      <div className="w-full py-6 md:py-8">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="flex flex-wrap justify-center gap-2 mb-4 text-center">
             <a 
               href="#" 
               className="text-gray-light hover:underline transition-all font-noto text-xs tracking-wider"
@@ -38,13 +38,11 @@ export default function Footer() {
             </a>
           </div>
 
-          
-          <p className="text-center text-gray-light text-[11px] mb-2 font-noto">
+          <p className="text-center text-gray-light text-[10px] md:text-[11px] mb-2 font-noto px-4">
             {locales.FOOTER.JAPAN}
           </p>
 
-          
-          <p className="text-center text-gray-light text-[11px] font-noto">
+          <p className="text-center text-gray-light text-[10px] md:text-[11px] font-noto">
             {locales.FOOTER.COPYRIGHT_NOTICE}
           </p>
         </div>

@@ -10,8 +10,8 @@ export default function Hero() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   return (
-    <section className="relative w-full min-h-screen flex bg-black overflow-hidden">
-      <div className="flex-1 flex items-center relative">
+    <section className="relative w-full min-h-screen flex flex-col md:flex-row bg-black overflow-hidden">
+      <div className="flex-1 flex items-center relative min-h-[50vh] md:min-h-screen">
         <div className="h-full w-full relative flex items-center justify-center overflow-hidden">
           <AnimatePresence initial={false}>
             <motion.img
@@ -25,7 +25,7 @@ export default function Hero() {
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="absolute inset-0 w-[91.5%] h-full object-cover"
+              className="absolute inset-0 w-full md:w-[91.5%] h-full object-cover"
             />
           </AnimatePresence>
         </div>
@@ -40,11 +40,11 @@ export default function Hero() {
 
       <ButtonLang />
 
-      <div className="flex-1 h-full flex flex-col items-center justify-center gap-8 p-8 mt-12 relative">
+      <div className="flex-1 h-full flex flex-col items-center justify-center gap-4 md:gap-8 p-4 md:p-8 mt-6 md:mt-12 relative">
         <motion.img
           src={locales.HERO.LOGO_SRC}
           alt="Logo"
-          className="w-[65%]"
+          className="w-[80%] md:w-[65%]"
           initial={{ opacity: 0, scale: 0.8, y: -20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{
@@ -55,7 +55,7 @@ export default function Hero() {
         <motion.img
           src={locales.HERO.DESCRIPTION}
           alt="Description"
-          className="w-[65%] mt-3"
+          className="w-[80%] md:w-[65%] mt-1 md:mt-3"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -66,7 +66,7 @@ export default function Hero() {
         />
 
         <motion.span
-          className="font-abril font-normal text-[22px] mt-5"
+          className="font-abril font-normal text-lg md:text-[22px] mt-2 md:mt-5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -78,36 +78,36 @@ export default function Hero() {
           {locales.HERO.SOCIAL_MEDIA}
         </motion.span>
 
-        <div className="flex gap-6 -translate-y-3">
+        <div className="flex gap-4 md:gap-6 -translate-y-1 md:-translate-y-3">
           <motion.a
             href="#"
-            className="text-3xl hover:text-gray-400 transition-colors duration-300"
+            className="text-2xl md:text-3xl hover:text-gray-400 transition-colors duration-300"
             aria-label="Twitter"
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <FaXTwitter size={28} />
+            <FaXTwitter size={24} className="md:w-7 md:h-7" />
           </motion.a>
           <motion.a
             href="#"
-            className="text-3xl hover:text-gray-400 transition-colors duration-300"
+            className="text-2xl md:text-3xl hover:text-gray-400 transition-colors duration-300"
             aria-label="Instagram"
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.65 }}
           >
-            <FaInstagram size={28} />
+            <FaInstagram size={24} className="md:w-7 md:h-7" />
           </motion.a>
           <motion.a
             href="#"
-            className="text-3xl hover:text-gray-400 transition-colors duration-300"
+            className="text-2xl md:text-3xl hover:text-gray-400 transition-colors duration-300"
             aria-label="TikTok"
             initial={{ opacity: 0, y: 20, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <FaTiktok size={28} />
+            <FaTiktok size={24} className="md:w-7 md:h-7" />
           </motion.a>
         </div>
       </div>

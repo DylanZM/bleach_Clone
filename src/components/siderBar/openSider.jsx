@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import locales from "../../locales/siderBar.json";
 
 export default function OpenSider({ isOpen, onClose }) {
   return (
@@ -42,7 +43,7 @@ export default function OpenSider({ isOpen, onClose }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1, duration: 0.5 }}
                 >
-                  TOP
+                  {locales.SIDEBAR.TOP}
                 </motion.a>
                 <motion.a
                   href="#introduction"
@@ -62,7 +63,7 @@ export default function OpenSider({ isOpen, onClose }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2, duration: 0.5 }}
                 >
-                  STORY
+                  {locales.SIDEBAR.STORY}
                 </motion.a>
               </div>
 
@@ -75,7 +76,7 @@ export default function OpenSider({ isOpen, onClose }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.25, duration: 0.5 }}
                 >
-                  STAFF&CAST
+                  {locales.SIDEBAR.STAFF_CAST}
                 </motion.a>
                 <motion.a
                   href="#character"
@@ -85,7 +86,7 @@ export default function OpenSider({ isOpen, onClose }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
                 >
-                  CHARACTER
+                  {locales.SIDEBAR.CHARACTER}
                 </motion.a>
                 <motion.a
                   href="#music"
@@ -95,7 +96,7 @@ export default function OpenSider({ isOpen, onClose }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.35, duration: 0.5 }}
                 >
-                  MUSIC
+                  {locales.SIDEBAR.MUSIC}
                 </motion.a>
               </div>
 
@@ -108,7 +109,7 @@ export default function OpenSider({ isOpen, onClose }) {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}
                 >
-                  MOVIE
+                  {locales.SIDEBAR.MOVIE}
                 </motion.a>
               </div>
             </nav>
