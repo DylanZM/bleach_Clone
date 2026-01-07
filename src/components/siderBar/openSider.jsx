@@ -9,22 +9,35 @@ export default function OpenSider({ isOpen, onClose }) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed left-20 top-0 right-0 bottom-0 z-40 bg-black"
-          style={{
-            backgroundImage: "url('/img/menu_bg.png')",
-            backgroundSize: "80%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "right 19%",
-          }}
+          className="fixed left-0 md:left-20 top-0 right-0 bottom-0 z-40 bg-black overflow-hidden"
+          onClick={onClose}
         >
           <div className="absolute inset-0 bg-black/70" />
 
-          <div className="relative z-10 h-full flex items-center justify-center px-20">
-            <nav className="w-full max-w-6xl">
-              <div className="flex justify-center gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, x: 100, scale: 0.8 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 100, scale: 0.8 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="absolute inset-0"
+            style={{
+              backgroundImage: "url('/img/menu_bg.png')",
+              backgroundSize: "80%",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "right 19%",
+            }}
+          />
+
+          <div 
+            className="relative z-10 h-full flex items-center justify-start px-4 md:pl-20"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <nav className="w-full max-w-4xl">
+              <div className="flex flex-col md:flex-row justify-start gap-4 md:gap-12 mb-8 md:mb-12">
                 <motion.a
                   href="#top"
-                  className="text-white text-4xl font-abril hover:text-gray-300 transition-colors"
+                  onClick={onClose}
+                  className="text-white text-3xl md:text-5xl font-abril hover:text-hover transition-colors"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1, duration: 0.5 }}
@@ -33,7 +46,8 @@ export default function OpenSider({ isOpen, onClose }) {
                 </motion.a>
                 <motion.a
                   href="#introduction"
-                  className="text-white text-4xl font-abril hover:text-gray-300 transition-colors"
+                  onClick={onClose}
+                  className="text-white text-3xl md:text-5xl font-abril hover:text-hover transition-colors"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.15, duration: 0.5 }}
@@ -42,7 +56,8 @@ export default function OpenSider({ isOpen, onClose }) {
                 </motion.a>
                 <motion.a
                   href="#story"
-                  className="text-white text-4xl font-abril hover:text-gray-300 transition-colors"
+                  onClick={onClose}
+                  className="text-white text-3xl md:text-5xl font-abril hover:text-hover transition-colors"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.2, duration: 0.5 }}
@@ -51,11 +66,11 @@ export default function OpenSider({ isOpen, onClose }) {
                 </motion.a>
               </div>
 
-              {/* Segunda fila */}
-              <div className="flex justify-center gap-12 mb-12">
+              <div className="flex flex-col md:flex-row justify-start gap-4 md:gap-12 mb-8 md:mb-12">
                 <motion.a
                   href="#staff-cast"
-                  className="text-white text-4xl font-abril hover:text-gray-300 transition-colors"
+                  onClick={onClose}
+                  className="text-white text-3xl md:text-5xl font-abril hover:text-hover transition-colors"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.25, duration: 0.5 }}
@@ -64,7 +79,8 @@ export default function OpenSider({ isOpen, onClose }) {
                 </motion.a>
                 <motion.a
                   href="#character"
-                  className="text-white text-4xl font-abril hover:text-gray-300 transition-colors"
+                  onClick={onClose}
+                  className="text-white text-3xl md:text-5xl font-abril hover:text-hover transition-colors"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3, duration: 0.5 }}
@@ -73,7 +89,8 @@ export default function OpenSider({ isOpen, onClose }) {
                 </motion.a>
                 <motion.a
                   href="#music"
-                  className="text-white text-4xl font-abril hover:text-gray-300 transition-colors"
+                  onClick={onClose}
+                  className="text-white text-3xl md:text-5xl font-abril hover:text-hover transition-colors"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.35, duration: 0.5 }}
@@ -82,11 +99,11 @@ export default function OpenSider({ isOpen, onClose }) {
                 </motion.a>
               </div>
 
-              {/* Tercera fila */}
-              <div className="flex justify-center">
+              <div className="flex justify-start">
                 <motion.a
                   href="#movie"
-                  className="text-white text-4xl font-abril hover:text-gray-300 transition-colors"
+                  onClick={onClose}
+                  className="text-white text-3xl md:text-5xl font-abril hover:text-hover transition-colors"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4, duration: 0.5 }}

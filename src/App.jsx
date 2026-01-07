@@ -9,7 +9,7 @@ function App() {
     <div className="min-h-screen w-full flex bg-bg-main text-white">
       <Sidebar />
 
-      <main className="flex-1">
+      <main className="flex-1 overflow-x-hidden">
         <Hero />
         <PreFooter />
         <Info />
